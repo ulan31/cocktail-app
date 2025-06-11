@@ -76,7 +76,6 @@ describe('useCocktailStore', () => {
   })
 
   it('should handle API errors', async () => {
-    // Мокаем ошибку API
     ;(getCocktails as vi.Mock).mockRejectedValueOnce(new Error('Network error'))
 
     const store = useCocktailStore()
